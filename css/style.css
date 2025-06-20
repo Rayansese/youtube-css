@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f9f9f9;
+    background-color: #212121;
 }
 
 .container {
@@ -17,7 +17,7 @@ body {
 }
 
 header .container {
-    background-color: #fff;
+    background-color: #212121;
     display: flex;
     flex-direction: row;
     /* align-items: center; */
@@ -54,7 +54,7 @@ header .container {
 .bars-icon li {
     width: 18px;
     height: 1px;
-    background-color: #000;
+    background-color: #fefefe;
 }
 
 .yt-b {
@@ -84,6 +84,7 @@ header .container {
 
 .search-container {
     display: flex;
+
     align-items: center;
     gap: 8px;
     flex: 1;
@@ -102,7 +103,7 @@ header .container {
 }
 
 .search-box input {
-    flex: 1;
+    flex: 1;    background-color: #212121;
     padding: 12px 16px;
     border: none;
     outline: none;
@@ -110,20 +111,20 @@ header .container {
 }
 
 .search-btn {
-    background-color: #f8f8f8;
+    background-color: #383838;
     border: none;
     padding: 12px 24px;
     cursor: pointer;
-
+    color: #f4f4f4;
     border-left: 1px solid #ccc;
 }
 
-.search-btn:hover {
+/* .search-btn:hover {
     background-color: #e5e5e5;
-}
+} */
 
 .voice-btn {
-    background-color: #f8f8f8;
+
     border: none;
     width: 40px;
     height: 40px;
@@ -132,11 +133,14 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #383838;
+    color: #f4f4f4;
+    /* border: 1px solid #f4f4f4; */
 }
 
-.voice-btn:hover {
+/* .voice-btn:hover {
     background-color: #e5e5e5;
-}
+} */
 
 .header-right {
     display: flex;
@@ -154,7 +158,10 @@ header .container {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
+    font-size: 14px;
+    background-color: #383838;
+    color: #f4f4f4;
+    /* border: 1px solid #f4f4f4; */
 }
 
 .create-btn:hover, .notifications-btn:hover {
@@ -427,22 +434,21 @@ nav .nav-item span {
 @media (max-width: 900px) {
     nav {
         width: 56px;
-    }
-    nav .nav-item span {
+        align-items: center;
     }
     nav .nav-item {
         justify-content: center;
+        align-items: center;
         padding: 10px 0;
         gap: 0;
         width: 100%;
     }
-    nav .nav-item .icon-shorts,
-    nav .nav-item i,
-    nav .nav-item svg {
+    nav .nav-item .icon {
         margin-right: 0;
         margin-left: 0;
+        display: block;
     }
-    nav .nav-item span {
+    nav .nav-item .label {
         display: none;
     }
     nav .top, nav .top ul,
