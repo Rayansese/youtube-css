@@ -18,7 +18,7 @@ body {
     padding: 0 15px;
 }
 header {
-
+z-index: 99999;
 }
 
 header .container {
@@ -246,7 +246,7 @@ header .container {
         background: none;
         border-radius: 50%;
         border: none;
-        color: #222;
+        color: #f4f4f4;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -256,7 +256,7 @@ header .container {
         justify-content: flex-end;
     }
     .search-btn:hover {
-        background: #f2f2f2;
+        background: #555;
     }
     .voice-btn, .create-btn, .notifications-btn {
         width: 32px;
@@ -550,6 +550,7 @@ nav .nav-item span {
     position: fixed;
     top: 60px;
     left: 200px;
+    padding-top: 8px;
     right: 0;
     background-color: var(--yt-frosted-glass-desktop);
     backdrop-filter: blur(48px);
@@ -600,3 +601,209 @@ nav .nav-item span {
     }
 }
 /* end nav2 */
+
+/* YouTube Home Video Cards */
+.videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 32px 20px;
+    padding: 16px 12px;
+    /* margin-top: calc(56px + 48px);  */
+    
+    margin-left: 220px;
+    top: 121px;
+    max-width: 1800px;
+    margin-right: auto;
+    position: relative;
+}
+@media (max-width: 900px) {
+    .videos {
+        margin-left: 56px;
+
+    }
+    header, .nav2, .bottomnav {
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        /* left: 0; */
+    }
+    header {
+        top: 0;
+    }
+    .nav2 {
+        top: 56px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .bottomnav {
+        bottom: 0;
+        /* margin-top: -40px; */
+        /* padding-top: 40px; */
+
+    }
+}
+@media (max-width: 690px) {
+    .videos {
+        /* margin-left: 0; */
+       height: auto;
+       margin-bottom: 100px;
+        z-index: -1;
+        
+    }
+}
+.video {
+    background: #181818;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: box-shadow 0.2s, transform 0.2s;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* max-width: 360px; */
+    margin: 0 auto;
+    transition: 0.3s;
+
+}
+
+.video:hover {
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.18);
+    transform: translateY(-4px) scale(1.02);
+    background-color: #2d2e2f;
+}
+
+.video > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 12px;
+    background: #222;
+}
+
+.text {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0 0 0;
+}
+
+.profilep img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 4px;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex: 1;
+}
+
+.title {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 2px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 42px;
+}
+
+.info {
+    color: #aaa;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.info span:first-child {
+    font-size: 14px;
+    color: #aaa;
+    font-weight: 400;
+}
+
+.info span:last-child {
+    font-size: 13px;
+    color: #aaa;
+}
+
+@media (max-width: 700px) {
+    .videos {
+        /* margin-top: 104px; */
+        margin-bottom: 80px;
+        /* margin-left: 0; */
+        z-index: 1;
+        position: relative;
+    }
+    header, .nav2, .bottomnav {
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        /* left: 0; */
+    }
+    header {
+        top: 0;
+    }
+    .nav2 {
+        top: 56px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+    .bottomnav {
+        bottom: 0;
+        /* margin-top: -40px; */
+        /* padding-top: 40px; */
+
+    }
+    .video {
+        /* width: calc(100% - 108px); */
+        /* margin-left: auto; */
+
+    }
+}
+@media (max-width: 690px) { 
+    .video {
+width: 95%;
+
+    }
+    .videos {
+        margin-left: 0;
+        /* margin-bottom: 50px; */
+        padding-bottom: 50px;
+    }
+    /* .video:nth-last-of-type() {
+    margin: 50px auto;
+
+    } */
+    
+}
+header, .nav2, .bottomnav {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    /* left: 0; */
+}
+header {
+    top: 0;
+}
+.nav2 {
+    top: 56px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.bottomnav {
+    bottom: 0;
+    /* margin-top: -40px; */
+    /* padding-top: 40px; */
+
+}
